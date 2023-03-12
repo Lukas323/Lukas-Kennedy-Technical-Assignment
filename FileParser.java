@@ -74,16 +74,14 @@ public class FileParser {
     /**
      * match method
      */
-    public String match(){
-        Pattern pattern = Pattern.compile("\\d\\d:\\d\\d,\\d\\d:\\d\\d+");
-        Pattern patt = Pattern.compile("(\\d+:\\d+)+");
-        Matcher matcher = patt.matcher("\"07:00\",\"09:00\"");
-        if (matcher.find()) {
-            System.out.println(matcher.group());
-            return matcher.group(); // you can get it from desired index as well
-        } else {
-            return null;
+    public String match(String line){
+        Pattern pattern = Pattern.compile("\"([^\"]*)\"");
+        Matcher matcher = pattern.matcher(line);
+        while (matcher.find()) {
+            System.out.println(matcher.group(1));
+             // you can get it from desired index as well
         }
+        return "pizza";
     }
 
     /**
@@ -92,7 +90,12 @@ public class FileParser {
      * @return
      */
     public boolean splitChar(char character){
+
         return Character.isDigit(character);
+//
+//        for(char[] chr: character){
+//            return Character.isDigit(chr);
+//        }
     }
 
     /**

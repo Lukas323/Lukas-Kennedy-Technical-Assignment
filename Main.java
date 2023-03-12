@@ -15,7 +15,8 @@ public class Main {
 
         //TODO: Optimize this so they can add however many files that they want
         FileParser fileParser = new FileParser(args[0]);
-        fileParser.readFile();
+//        fileParser.readFile();
+        fileParser.match();
 
 
     }
