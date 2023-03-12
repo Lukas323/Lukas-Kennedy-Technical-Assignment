@@ -2,7 +2,11 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * public class FileParser both reads the file inputted
@@ -42,19 +46,10 @@ public class FileParser {
             String line = reader.readLine();
 
             while(line != null){
+                System.out.println(Arrays.asList)
+                Arrays.asList(line.toCharArray())
+                        .stream().filter(c-> splitChar(c)).toList();
 
-                //TODO: Write comment explaining how you split it. And you should split it by a certain regex
-                String[] stringList = line.split(":");
-                //TODO: I have to figure out how to split by the regex I want
-
-                System.out.println(stringList);
-
-                HashSet<String> stringSet = new HashSet<>();
-
-                for(String string: stringList){
-                    stringSet.add(string);
-                }
-                System.out.println(stringSet);
                 line = reader.readLine();
             }
 
@@ -70,6 +65,30 @@ public class FileParser {
         }
 
         return null;
+    }
+
+    /**
+     * match method
+     */
+    public String match(){
+        Pattern pattern = Pattern.compile("\\d\\d:\\d\\d,\\d\\d:\\d\\d+");
+        Pattern patt = Pattern.compile("(\\d+:\\d+)+");
+        Matcher matcher = patt.matcher("\"07:00\",\"09:00\"");
+        if (matcher.find()) {
+            System.out.println(matcher.group());
+            return matcher.group(); // you can get it from desired index as well
+        } else {
+            return null;
+        }
+    }
+
+    /**
+     * if character is a digit return .toCharArray string into array of characters. Then stream that
+     * @param character
+     * @return
+     */
+    public boolean splitChar(char character){
+        return Character.isDigit(character);
     }
 
     /**
