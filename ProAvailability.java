@@ -1,4 +1,3 @@
-import javafx.util.Pair;
 
 /**
  * ProAvailability class instantiates an Array of type Input.
@@ -10,6 +9,7 @@ public class ProAvailability {
     private Input[] inputsArrayed;
 
     /**
+     *
      * ProAvailability class constructor
      *
      * Takes in an Array of args to populate
@@ -18,6 +18,8 @@ public class ProAvailability {
      * @param args
      */
     public ProAvailability(String[] args){
+        //TODO: Here I have to do the same thing done in travel planner to take in what is typed in command line
+        //      to inputs
 
         //for every pair of arguments
         for(int i = 0; i < args.length/2; i = i + 2){
