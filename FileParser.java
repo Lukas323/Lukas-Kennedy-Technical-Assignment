@@ -62,4 +62,18 @@ public class FileParser {
 
         return null;
     }
+
+    /**
+     * public writeToFile method writes the Integer[][] output from
+     * the mergeProAvailability() of the ProAvailability class to a
+     * new file to be viewed
+     *
+     * Takes in Integer[][] output as a parameter to write it
+     * to a new file
+     *
+     * @param availabilityArray
+     */
+    public void writeToFile(Integer[][] availabilityArray){
+
+    }
 }
