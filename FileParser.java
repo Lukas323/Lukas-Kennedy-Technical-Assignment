@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
@@ -24,6 +25,7 @@ public class FileParser {
      */
     public FileParser(String fileName){
         this.fileName = fileName;
+        this.readFile();
     }
 
     /**
@@ -45,14 +47,14 @@ public class FileParser {
             //initialize line
             String line = reader.readLine();
 
-            while(line != null){
-                System.out.println(Arrays.asList(line.toCharArray()));
+            while(line != null && line != ""){
+                //parse the line into startTime and endTime
+                String parsedNumber = this.match(line);
 
-                for(char[] character: Arrays.asList(line.toCharArray())){
-                    System.out.println(character);
-                }
-//                Arrays.asList(line.toCharArray())
-//                        .stream().filter(c-> splitChar(c)).toList();
+                //return parsedNumber as integer
+                Integer integer = this.makeInteger(parsedNumber);
+
+//                System.out.println(integer);
 
                 line = reader.readLine();
             }
@@ -67,7 +69,6 @@ public class FileParser {
             System.out.println
                     ("An IOException has occurred");
         }
-
         return null;
     }
 
@@ -75,13 +76,59 @@ public class FileParser {
      * match method
      */
     public String match(String line){
+        //pattern gets everything between the quotes
         Pattern pattern = Pattern.compile("\"([^\"]*)\"");
+
+        //matcher instantiated with line to look through for matches
         Matcher matcher = pattern.matcher(line);
+
+        String parsedNumber = "";
+
+        //while a match exists
         while (matcher.find()) {
-            System.out.println(matcher.group(1));
-             // you can get it from desired index as well
+
+            //parse numbers into a String
+            parsedNumber = matcher.group(1);
+
+            if(parsedNumber == ""){
+                break;
+            }
+
+            this.makeInteger(parsedNumber);
+
         }
-        return "pizza";
+
+        //return String of parsedNumbers (e.g. "07:00, 09:20, 14:00)
+        return parsedNumber;
+    }
+
+
+    /**
+     * makeInteger takes in the String parsedNumber,
+     * and splits it into hours and minutes
+     * (e.g. 07:05, hours = 7, minutes = 5)
+     * It then multiplies hours by 100 and
+     * returns totalTime, hours + minutes.
+     * (e.g. 705) to make sorting easier
+     *
+     * @param parsedNumber
+     * @return
+     */
+    public Integer makeInteger(String parsedNumber) {
+        Integer totalTime = 0;
+
+        if(parsedNumber == ""){
+            return totalTime;
+        }
+        //split every time period on its colon (e.g. 07:00 = ["07", "00"]
+        String[] parsed = parsedNumber.split(":");
+
+        Integer hour = Integer.valueOf(parsed[0]);
+        Integer bigHour = hour*100;
+        Integer minutes = Integer.valueOf(parsed[1]);
+        totalTime = bigHour + minutes;
+
+        return totalTime;
     }
 
     /**

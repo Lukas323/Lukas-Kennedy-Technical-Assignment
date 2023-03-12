@@ -12,23 +12,11 @@ public class ProAvailability {
      *
      * ProAvailability class constructor
      *
-     * Takes in an Array of args to populate
-     * array of inputs (e.g. [("07:00", "11:00"),("13:00","19:00"), etc)
+     * Takes in fileParser to turn sort array TODO: Is it only an array here?
      *
-     * @param args
+     * @param fileParser
      */
-    public ProAvailability(String[] args){
-        //TODO: Here I have to do the same thing done in travel planner to take in what is typed in command line
-        //      to inputs
+    public ProAvailability(FileParser fileParser){
 
-        //for every pair of arguments
-        for(int i = 0; i < args.length/2; i = i + 2){
-
-            //instantiate a new Input with startTime = args[even] and endTime = args[odd]
-            Input input = new Input(args[i], args[i+1]);
-
-            //add new Input to array of inputs
-            this.inputsArrayed[i] = input;
         }
     }
-}
