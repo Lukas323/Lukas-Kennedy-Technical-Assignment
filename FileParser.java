@@ -9,6 +9,7 @@ import java.io.IOException;
  */
 public class FileParser {
 
+    //private String fileName declared to be used in the class's methods
     private String fileName;
 
     /**
@@ -22,7 +23,8 @@ public class FileParser {
 
     /**
      * public readFile() method reads the file passed-in to
-     * the FileParser class and returns an Integers[][]
+     * the FileParser class and returns an Integers[][] representing
+     * the availability inputs from the professionals
      * @return
      */
     public Integer[][] readFile(){
@@ -42,10 +44,12 @@ public class FileParser {
 
                 //TODO: Write comment explaining how you split it. And you should split it by a certain regex
                 String[] stringList = line.split(":");
+                //TODO: I have to figure out how to split by the regex I want
+
                 System.out.println(stringList);
-                line = null;
             }
 
+            //close stream
             reader.close();
 
         } catch(FileNotFoundException e) {

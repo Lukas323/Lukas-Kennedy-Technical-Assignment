@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bae09b0c-1460-42e5-b6ea-22aeb70aab83" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CSVParserTestSuite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FileParser-test-files/test1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FileParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProAvailability.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProAvailability.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/FileParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/FileParser-test-files/test1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/FileParser-test-files/test1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/FileParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/FileParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +95,8 @@
       <workItem from="1678589864830" duration="243000" />
       <workItem from="1678590166101" duration="971000" />
       <workItem from="1678591204452" duration="788000" />
-      <workItem from="1678592038515" duration="1734000" />
+      <workItem from="1678592038515" duration="1983000" />
+      <workItem from="1678594257733" duration="331000" />
     </task>
     <servers />
   </component>
