@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashSet;
 
 /**
  * public class FileParser both reads the file inputted
@@ -47,6 +48,14 @@ public class FileParser {
                 //TODO: I have to figure out how to split by the regex I want
 
                 System.out.println(stringList);
+
+                HashSet<String> stringSet = new HashSet<>();
+
+                for(String string: stringList){
+                    stringSet.add(string);
+                }
+                System.out.println(stringSet);
+                line = reader.readLine();
             }
 
             //close stream
