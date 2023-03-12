@@ -46,9 +46,13 @@ public class FileParser {
             String line = reader.readLine();
 
             while(line != null){
-                System.out.println(Arrays.asList)
-                Arrays.asList(line.toCharArray())
-                        .stream().filter(c-> splitChar(c)).toList();
+                System.out.println(Arrays.asList(line.toCharArray()));
+
+                for(char[] character: Arrays.asList(line.toCharArray())){
+                    System.out.println(character);
+                }
+//                Arrays.asList(line.toCharArray())
+//                        .stream().filter(c-> splitChar(c)).toList();
 
                 line = reader.readLine();
             }
