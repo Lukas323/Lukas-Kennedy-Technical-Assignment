@@ -110,17 +110,20 @@ public class FileParser {
             //add them all to an arrayList and then split it by two
 
         }
-        System.out.println(intArray); //TODO: What's up with the last two?
+//        System.out.println(intArray); //TODO: What's up with the last two?
 
-        Integer[][] arrayOfArrays = new Integer[intArray.size()/2][];
+        Integer[][] arrayOfArrays = new Integer[intArray.size()/2][2];
 
-//        for(int i = 0; i < intArray.size(); i = i+2){
+        int j = 0;
+        for(int i = 0; i < intArray.size(); i++){
 //            Integer[] newArray = new Integer[2];
 //            newArray[i] = intArray.get(i);
 //            newArray[i+1] = intArray.get(i+1);
-//
-////            arrayOfArrays[i][i] = newArray;
-//        }
+            int k = i/2;
+            arrayOfArrays[k][j] = intArray.get(i);
+            System.out.println(Arrays.deepToString(arrayOfArrays));
+            j = (j+1) % 2;
+        }
 
         //return String of parsedNumbers (e.g. "07:00, 09:20, 14:00)
         return parsedNumber;
