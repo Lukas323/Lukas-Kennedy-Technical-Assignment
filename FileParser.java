@@ -1,3 +1,4 @@
+import javax.sound.sampled.Line;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -23,7 +24,7 @@ public class FileParser {
      * to read from and initializes the class's instance variables
      * @param fileName
      */
-    public FileParser(String fileName){
+    public FileParser(String fileName) throws LineEmptyException {
         this.fileName = fileName;
         this.readFile();
     }
@@ -34,7 +35,7 @@ public class FileParser {
      * the availability inputs from the professionals
      * @return
      */
-    public Integer[][] readFile(){
+    public Integer[][] readFile() throws LineEmptyException{
 
         //if the filename passed in does not exist
         try{
@@ -75,7 +76,7 @@ public class FileParser {
     /**
      * match method
      */
-    public String match(String line){ //TODO: Change method name
+    public String match(String line) throws LineEmptyException { //TODO: Change method name
         //pattern gets everything between the quotes
         Pattern pattern = Pattern.compile("\"([^\"]*)\"");
 
@@ -110,7 +111,8 @@ public class FileParser {
             Integer[] newArray = new Integer[2];
             newArray[i] = intArray.get(i);
             newArray[i+1] = intArray.get(i+1);
-//            arrayOfArrays[i][] =
+
+//            arrayOfArrays[i][i] = newArray;
         }
 
         //return String of parsedNumbers (e.g. "07:00, 09:20, 14:00)
@@ -129,10 +131,11 @@ public class FileParser {
      * @param parsedNumber
      * @return
      */
-    public Integer makeInteger(String parsedNumber) {
+    public Integer makeInteger(String parsedNumber) throws LineEmptyException{
 
         if(parsedNumber == ""){
-            return totalTime;
+            throw new LineEmptyException //TODO: This can't be the best way to handle this. What if this is one of their edge cases
+                    (".txt file inputted has empty lines, please try again.");
         }
         //split every time period on its colon (e.g. 07:00 = ["07", "00"]
         String[] parsed = parsedNumber.split(":");

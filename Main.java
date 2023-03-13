@@ -7,7 +7,7 @@ public class Main {
      * Main method that sets up the REPL and runs it.
      * @param args arguments passed into main
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws LineEmptyException {
         if(args.length == 0){
             System.out.println("no args inputted, try again");
             System.exit(0);

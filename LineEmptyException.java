@@ -4,4 +4,11 @@
  */
 public class LineEmptyException extends Exception{
 
+    /**
+     * public LineEmptyException constructor
+     */
+    public LineEmptyException(String message){
+        System.out.println(message);
+    }
+
 }
