@@ -24,9 +24,16 @@ public class FileParser {
      * to read from and initializes the class's instance variables
      * @param fileName
      */
-    public FileParser(String fileName) throws LineEmptyException {
+    public FileParser(String fileName) {
         this.fileName = fileName;
-        this.readFile();
+
+        try{
+            this.readFile();
+        } catch(LineEmptyException e){
+            System.out.println
+                    (".txt file has an empty line, " +
+                            "please remove it for the solution to proceed");
+        }
     }
 
     /**
@@ -107,13 +114,13 @@ public class FileParser {
 
         Integer[][] arrayOfArrays = new Integer[intArray.size()/2][];
 
-        for(int i = 0; i < intArray.size(); i = i+2){
-            Integer[] newArray = new Integer[2];
-            newArray[i] = intArray.get(i);
-            newArray[i+1] = intArray.get(i+1);
-
-//            arrayOfArrays[i][i] = newArray;
-        }
+//        for(int i = 0; i < intArray.size(); i = i+2){
+//            Integer[] newArray = new Integer[2];
+//            newArray[i] = intArray.get(i);
+//            newArray[i+1] = intArray.get(i+1);
+//
+////            arrayOfArrays[i][i] = newArray;
+//        }
 
         //return String of parsedNumbers (e.g. "07:00, 09:20, 14:00)
         return parsedNumber;
