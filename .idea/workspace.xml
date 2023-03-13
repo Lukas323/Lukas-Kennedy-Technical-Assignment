@@ -8,10 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FileParser-test-files/test1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FileParser-test-files/test1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/FileParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProAvailability.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProAvailability.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/FileParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/FileParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +98,7 @@
       <workItem from="1678635235109" duration="599000" />
       <workItem from="1678635849677" duration="5773000" />
       <workItem from="1678650843635" duration="600000" />
-      <workItem from="1678651766485" duration="7995000" />
+      <workItem from="1678651766485" duration="10151000" />
     </task>
     <servers />
   </component>
@@ -122,11 +119,10 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/FileParser.java</url>
-          <line>92</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NumberFormatException" package="java.lang" />
+          <option name="timeStamp" value="9" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

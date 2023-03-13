@@ -47,7 +47,7 @@ public class FileParser {
             //initialize line
             String line = reader.readLine();
 
-            while(line != null && line != ""){
+            while(line != null){
                 //parse the line into startTime and endTime
                 String parsedNumber = this.match(line);
 
@@ -75,7 +75,7 @@ public class FileParser {
     /**
      * match method
      */
-    public String match(String line){
+    public String match(String line){ //TODO: Change method name
         //pattern gets everything between the quotes
         Pattern pattern = Pattern.compile("\"([^\"]*)\"");
 
@@ -84,18 +84,33 @@ public class FileParser {
 
         String parsedNumber = "";
 
+        ArrayList<Integer> intArray= new ArrayList<>();
         //while a match exists
         while (matcher.find()) {
 
             //parse numbers into a String
             parsedNumber = matcher.group(1);
 
-            if(parsedNumber == ""){
-                break;
-            }
+            //instantiating integer to store the parsedNumber integer
+            Integer integer = this.makeInteger(parsedNumber);
 
-            this.makeInteger(parsedNumber);
+            //add integer to int array
+            intArray.add(integer);
 
+            //every two numbers should go in an array array of arrays, and
+            //every two numbers should be 1 array
+            //add them all to an arrayList and then split it by two
+
+        }
+        System.out.println(intArray); //TODO: What's up with the last two?
+
+        Integer[][] arrayOfArrays = new Integer[intArray.size()/2][];
+
+        for(int i = 0; i < intArray.size(); i = i+2){
+            Integer[] newArray = new Integer[2];
+            newArray[i] = intArray.get(i);
+            newArray[i+1] = intArray.get(i+1);
+//            arrayOfArrays[i][] =
         }
 
         //return String of parsedNumbers (e.g. "07:00, 09:20, 14:00)
@@ -115,7 +130,6 @@ public class FileParser {
      * @return
      */
     public Integer makeInteger(String parsedNumber) {
-        Integer totalTime = 0;
 
         if(parsedNumber == ""){
             return totalTime;
@@ -126,7 +140,7 @@ public class FileParser {
         Integer hour = Integer.valueOf(parsed[0]);
         Integer bigHour = hour*100;
         Integer minutes = Integer.valueOf(parsed[1]);
-        totalTime = bigHour + minutes;
+        Integer totalTime = bigHour + minutes;
 
         return totalTime;
     }
