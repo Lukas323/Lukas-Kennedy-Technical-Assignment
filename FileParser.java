@@ -110,16 +110,13 @@ public class FileParser {
             //add them all to an arrayList and then split it by two
 
         }
-//        System.out.println(intArray); //TODO: What's up with the last two?
 
         Integer[][] arrayOfArrays = new Integer[intArray.size()/2][2];
 
         int j = 0;
-        for(int i = 0; i < intArray.size(); i++){
-//            Integer[] newArray = new Integer[2];
-//            newArray[i] = intArray.get(i);
-//            newArray[i+1] = intArray.get(i+1);
-            int k = i/2;
+        for(int i = 0; i < intArray.size(); i++){ //i from 0 to 5
+
+            int k = i/2; //k goes 0,0,1,1,2,2 because java rounds fractions down
             arrayOfArrays[k][j] = intArray.get(i);
             System.out.println(Arrays.deepToString(arrayOfArrays));
             j = (j+1) % 2;
@@ -156,20 +153,6 @@ public class FileParser {
         Integer totalTime = bigHour + minutes;
 
         return totalTime;
-    }
-
-    /**
-     * if character is a digit return .toCharArray string into array of characters. Then stream that
-     * @param character
-     * @return
-     */
-    public boolean splitChar(char character){
-
-        return Character.isDigit(character);
-//
-//        for(char[] chr: character){
-//            return Character.isDigit(chr);
-//        }
     }
 
     /**
