@@ -4,7 +4,8 @@
  */
 public class Main {
     /**
-     * Main method that sets up the REPL and runs it.
+     * Main method that sets up the programs' classes
+     * and runs the program
      * @param args arguments passed into main
      */
     public static void main(String[] args) {
@@ -13,11 +14,9 @@ public class Main {
             System.exit(0);
         }
 
-//        System.out.println(Integer.parseInt("07"));
-        //TODO: Optimize this so they can add however many files that they want
         FileParser fileParser = new FileParser(args[0]);
-        ProAvailability proAvailability = new ProAvailability(fileParser);
-
-
+        new ProAvailability(fileParser);
+        /* println that prints to terminal is in ProAvailability
+          returnHoursToString() method before the return */
     }
 }

@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.regex.Pattern;
 
 /**
- * ProAvailability class instantiates an Array of type Input.
- * Input instantiates a pair of Strings for startTime and endTime //TODO: Or will it have ints?
+ * ProAvailability class associates with a fileParser
+ * to sort the availability hours inputted and return
+ * them in their proper format (e.g. [["07:00", "09:20"]] )
  */
 public class ProAvailability {
 
@@ -14,9 +14,9 @@ public class ProAvailability {
 
     /**
      * ProAvailability class constructor
-     * <p>
-     * Takes in fileParser to turn sort array TODO: Is it only an array here?
      *
+     * Takes in fileParser to get 2D-Array of integers
+     * (time periods) pulled from the inputted file
      * @param fileParser
      */
     public ProAvailability(FileParser fileParser){
@@ -46,7 +46,7 @@ public class ProAvailability {
         }
 
         //sorts each array based on first element: Puts smaller first elements first
-        Arrays.sort(this.timeIntervals, (array1,array2) -> array1[0] - array2[0]); //TODO: How does this work
+        Arrays.sort(this.timeIntervals, (array1,array2) -> array1[0] - array2[0]);
 
         //instantiating ArrayList for mutability (we don't know size of businessHours [][])
         List<Integer[]> businessHourArray = new ArrayList<>();
@@ -62,7 +62,7 @@ public class ProAvailability {
             Integer currEndTime = currInterval[1];
 
             //if we have [700,920],[800,1300], nextStartTime will equal 800
-            Integer nextStartTime = nextInterval[0]; //TODO: Won't this get [700] at first. Maybe only at first
+            Integer nextStartTime = nextInterval[0];
             Integer nextEndTime = nextInterval[1];
 
             //if 920 > 800
@@ -89,11 +89,9 @@ public class ProAvailability {
      * the form given via the inputs
      * (e.g. [[700, 1900]] -> [["07:00", "19:00"]]
      */
-    public void returnHoursToString() throws LineEmptyException{
+    public String[][] returnHoursToString() throws LineEmptyException{
         //instantiate integerBusinessHours with 2D-Array of BusinessHours in integer form
         Integer[][] integerBusinessHours = this.createBusinessHours();
-
-        System.out.println(Arrays.deepToString(this.createBusinessHours()));
 
         //instantiate timeArrayList to hold the integers turned to Strings
         List<String> timeArrayList = new ArrayList<>();
@@ -106,7 +104,6 @@ public class ProAvailability {
             String intStringEnd = this.makeString(integerBusinessHours[i][1]);
             timeArrayList.add(intStringEnd);
         }
-        System.out.println(timeArrayList);
 
         /*if timeArrayList has 6 slots, finalOutput should have 3 slots,
           each containing an array with 2 slots */
@@ -124,7 +121,7 @@ public class ProAvailability {
         }
 
         System.out.println(Arrays.deepToString(finalOutput));
-
+        return finalOutput;
     }
 
     /**

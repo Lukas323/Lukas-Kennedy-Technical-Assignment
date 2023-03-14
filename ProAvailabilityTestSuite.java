@@ -108,7 +108,7 @@ public class ProAvailabilityTestSuite {
     /**
      * testEmptyInputs tests the case of empty .txt file lines
      * and ascertains that any empty array inputs to our ProAvailability
-     * class will not create empty BusinessHours //TODO: Should not.
+     * class will not create empty BusinessHours
      */
     @Test (expected = LineEmptyException.class)
     public void testEmptyInputs() throws LineEmptyException {
