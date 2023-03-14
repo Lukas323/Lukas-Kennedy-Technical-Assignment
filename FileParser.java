@@ -128,7 +128,7 @@ public class FileParser {
             int k = i/2; //k goes 0,0,1,1,2,2 because java rounds fractions down
             this.arrayOfArrays[k][j] = intArray.get(i);
 
-            j = (j+1) % 2;
+            j = (j+1) % 2; //1 % 2 = 1. j alternates 1, 0, 1, 0, 1
         }
     }
 

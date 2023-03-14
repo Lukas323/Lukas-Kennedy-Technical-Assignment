@@ -90,23 +90,40 @@ public class ProAvailability {
      * (e.g. [[700, 1900]] -> [["07:00", "19:00"]]
      */
     public void returnHoursToString() throws LineEmptyException{
+        //instantiate integerBusinessHours with 2D-Array of BusinessHours in integer form
         Integer[][] integerBusinessHours = this.createBusinessHours();
 
         System.out.println(Arrays.deepToString(this.createBusinessHours()));
 
-        //I want to say for every array in Integer[][] convert it to the proper form
+        //instantiate timeArrayList to hold the integers turned to Strings
+        List<String> timeArrayList = new ArrayList<>();
 
-        this.makeString(integerBusinessHours[0][0]);
+        //turn hours into strings and adds them to timeArrayList for storage
+        for(int i = 0; i < integerBusinessHours.length; i++){
+            String intStringStart = this.makeString(integerBusinessHours[i][0]);
+            timeArrayList.add(intStringStart);
 
+            String intStringEnd = this.makeString(integerBusinessHours[i][1]);
+            timeArrayList.add(intStringEnd);
+        }
+        System.out.println(timeArrayList);
 
+        /*if timeArrayList has 6 slots, finalOutput should have 3 slots,
+          each containing an array with 2 slots */
+        String[][] finalOutput = new String[timeArrayList.size()/2][2];
 
-//        String integerBusinessHours.toString();
+        //Regroup Strings into their respective start time and end time
+        int j = 0;
+        for(int i = 0; i < timeArrayList.size(); i++) { //i from 0 to 5
 
+            int k = i / 2; //k goes 0,0,1,1,2,2 because java rounds fractions down
+            finalOutput[k][j] = timeArrayList.get(i);
 
+            j = (j + 1) % 2; //1 % 2 = 1. j alternates 1, 0, 1, 0, 1
 
-//        for(Integer[] array: integerBusinessHours){
-//            array[0]
-//        }
+        }
+
+        System.out.println(Arrays.deepToString(finalOutput));
 
     }
 
@@ -114,7 +131,7 @@ public class ProAvailability {
      * makeString takes in an integer and returns it
      * in the proper string format for time
      */
-    public void makeString(Integer integer){
+    public String makeString(Integer integer){
         String intString = integer.toString();
 
         if(intString.length() == 3){
@@ -134,23 +151,7 @@ public class ProAvailability {
         for(int i = 0; i<7; i = i + 6){
             finalIntString = this.addChar(newerIntString, quotationMark, 6);
         }
-
-        System.out.println(finalIntString);
-
-
-
-//        char[] charArray = intString.toCharArray();
-//        char[] newCharArray = new char[4];
-//        for(int i = 0; i < 4; i++){
-//            char character = charArray[i];
-//            if(i == 1){
-//                character = character + ":";
-//            }
-//            newCharArray[i] = character;
-//        }
-//        System.out.println(newCharArray);
-
-        //add semicolon
+        return finalIntString;
     }
 
     /**
