@@ -69,7 +69,6 @@ public class FileParser {
                     intArray.add(timeInteger);
                 }
 
-
                 this.makeArray(intArray);
 
                 line = reader.readLine();
@@ -92,8 +91,16 @@ public class FileParser {
      * Match goes through a .txt file line and retrieves
      * the times from within the quotation marks (07:00, 09:20)
      * and returns a list of times
+     *
+     * @param line
+     * @throws LineEmptyException
      */
-    public List<String> match(String line) {
+    public List<String> match(String line) throws LineEmptyException{
+
+        if(line == ""){
+            throw new LineEmptyException
+                    ("line is empty, please input a .txt file without empty lines");
+        }
         //pattern gets everything between the quotes
         Pattern pattern = Pattern.compile("\"([^\"]*)\"");
 
@@ -120,9 +127,8 @@ public class FileParser {
      * makeArray takes in each integer parsedInt and returns
      * an Array of Arrays of those integers parsed. (e.g. [[700,920], [1400,1900]] )
      * @return
-     * @throws LineEmptyException
      */
-    public void makeArray(List<Integer> intArray) {
+    public void makeArray(List<Integer> intArray) throws LineEmptyException{
 
         this.arrayOfArrays = new Integer[intArray.size()/2][2];
 

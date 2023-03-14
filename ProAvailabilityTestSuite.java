@@ -48,16 +48,16 @@ public class ProAvailabilityTestSuite {
         //test complete overlap (when every interval overlaps to create 1 businessHour)
         ProAvailability oneBusinessHour =
                 new ProAvailability(this.normalParser);
-        Integer[][] complete = new Integer[1][2];
-        complete[0][0] = 700;
-        complete[0][1] = 1900;
-        Assert.assertArrayEquals(complete,
+        Integer[][] completeOverlap = new Integer[1][2];
+        completeOverlap[0][0] = 700;
+        completeOverlap[0][1] = 1900;
+        Assert.assertArrayEquals(completeOverlap,
                 oneBusinessHour.createBusinessHours());
 
 
         //test perfect overlap (when currEnd = nextStart);
         ProAvailability multipleBusinessHours =
-                new ProAvailability((this.normalParser2));
+                new ProAvailability(this.normalParser2);
         Integer[][] nonPerfectOverlap = new Integer[3][2];
         nonPerfectOverlap[0][0] = 1000;
         nonPerfectOverlap[0][1] = 1422;
@@ -68,7 +68,18 @@ public class ProAvailabilityTestSuite {
         Assert.assertArrayEquals(nonPerfectOverlap,
                 multipleBusinessHours.createBusinessHours());
 
-
+        //test case where there is no overlap between interval inputs
+        ProAvailability separateBusinessHours =
+                new ProAvailability(this.noOverlapParser);
+        Integer[][] noOverlap = new Integer[3][2];
+        noOverlap[0][0] = 200;
+        noOverlap[0][1] = 1011;
+        noOverlap[1][0] = 1400;
+        noOverlap[1][1] = 1900;
+        noOverlap[2][0] = 2020;
+        noOverlap[2][1] = 2323;
+        Assert.assertArrayEquals(noOverlap,
+                separateBusinessHours.createBusinessHours());
     }
 
     /**
@@ -77,8 +88,14 @@ public class ProAvailabilityTestSuite {
      */
     @Test
     public void testDuplicates(){
-
-
+        //I placed each previous file's inputs into the same line twice to test
+        ProAvailability duplicateAvailabilities =
+                new ProAvailability(this.duplicateParser);
+        Integer[][] duplicatesMerged = new Integer[2][2];
+        duplicatesMerged[0][0] = 700;
+        duplicatesMerged[0][1] = 1903;
+        duplicatesMerged[1][0] = 2100;
+        duplicatesMerged[1][1] = 2359;
     }
 
     /**

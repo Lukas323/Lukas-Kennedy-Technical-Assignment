@@ -32,8 +32,8 @@ public class ProAvailability {
      * @return
      */
     public Integer[][] createBusinessHours() {
-        //if there are one or zero timeIntervals (availability periods inputted)
-        if (this.timeIntervals.length <= 1) {
+
+        if(this.timeIntervals.length < 1){
             return this.timeIntervals;
         }
 

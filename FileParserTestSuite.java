@@ -48,7 +48,7 @@ public class FileParserTestSuite {
      * duplicate arrays and no empty lines
      */
     @Test
-    public void testOneLineBaseCase() throws LineEmptyException {
+    public void testOneLineBaseCase() {
         Integer[][] baseCase = new Integer[3][2];
         baseCase[0][0] = 700;
         baseCase[0][1] = 920;
