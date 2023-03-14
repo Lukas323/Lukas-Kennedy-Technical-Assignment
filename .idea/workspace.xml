@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bae09b0c-1460-42e5-b6ea-22aeb70aab83" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ScheduleConsole.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/FileParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProAvailability.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProAvailability.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/FileParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/FileParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/ProAvailability.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/ProAvailability.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileParserTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/FileParserTestSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output" beforeDir="false" afterPath="$PROJECT_DIR$/Output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/FileParserTestSuite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/FileParserTestSuite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/Output" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/Output" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,11 +48,16 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/FileParser-test-files" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.FileParserTestSuite.writeToFile">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Lukas-Kennedy-Technical-Assignment" />
-      <option name="PROGRAM_PARAMETERS" value="FileParser-test-files/duplicateInputs.txt &quot;Output&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="FileParser-test-files/baseCase.txt &quot;Output&quot;" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -67,6 +67,16 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FileParserTestSuite" />
       <option name="METHOD_NAME" value="testOneLineBaseCase" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileParserTestSuite.writeToFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lukas-Kennedy-Technical-Assignment" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FileParserTestSuite" />
+      <option name="METHOD_NAME" value="writeToFile" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -92,30 +102,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProAvailabilityTestSuite.testOverlap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lukas-Kennedy-Technical-Assignment" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ProAvailabilityTestSuite" />
-      <option name="METHOD_NAME" value="testOverlap" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.FileParserTestSuite.writeToFile" />
       <item itemvalue="JUnit.FileParserTestSuite.testOneLineBaseCase" />
       <item itemvalue="JUnit.ProAvailabilityTestSuite.testEmptyInputs" />
       <item itemvalue="JUnit.ProAvailabilityTestSuite.testDuplicates" />
-      <item itemvalue="JUnit.ProAvailabilityTestSuite.testOverlap" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FileParserTestSuite.writeToFile" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ProAvailabilityTestSuite.testDuplicates" />
         <item itemvalue="JUnit.FileParserTestSuite.testOneLineBaseCase" />
         <item itemvalue="JUnit.ProAvailabilityTestSuite.testEmptyInputs" />
-        <item itemvalue="JUnit.ProAvailabilityTestSuite.testOverlap" />
       </list>
     </recent_temporary>
   </component>
@@ -154,7 +154,7 @@
       <workItem from="1678750867960" duration="28123000" />
       <workItem from="1678818037673" duration="57000" />
       <workItem from="1678818113937" duration="659000" />
-      <workItem from="1678818786959" duration="672000" />
+      <workItem from="1678818786959" duration="3084000" />
     </task>
     <servers />
   </component>

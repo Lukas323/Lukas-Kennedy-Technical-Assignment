@@ -85,14 +85,28 @@ public class FileParserTestSuite {
     @Test
     public void writeToFile(){
         try{
+            //create new fileParser based off of the base case
             FileParser fileParser = new FileParser
-                    ("FileParser-test-files/emptyLines.txt");
-            ProAvailability pro = new ProAvailability(fileParser);
-            fileParser.writeToFile(pro.returnHoursToString(), "Output");
+                    ("FileParser-test-files/baseCase.txt");
 
+            //create a new ProAvailability associated with fileParser
+            ProAvailability proAvailability = new ProAvailability(fileParser);
+
+            //write the solution business hours of that file to a new file Output
+            fileParser.writeToFile(proAvailability.returnHoursToString(), "Output");
+
+            //create a fileParser based on newly created file Output
             FileParser fileParser1 = new FileParser("Output");
-            ProAvailability pro1 = new ProAvailability(fileParser);
-            pro.returnHoursToString()
+
+            //instantiate a new ProAvailability based on fileParser1
+            ProAvailability proAvailability1 = new ProAvailability(fileParser1);
+
+            /*
+              Assert that the solution business hours returned by the first ProAvailability
+              Are the same as the business hours derived from the newly created file Output
+              */
+            Assert.assertArrayEquals(proAvailability.returnHoursToString(),
+                    proAvailability1.returnHoursToString());
         }catch (LineEmptyException e){
 
         }
