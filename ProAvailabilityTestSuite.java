@@ -12,6 +12,8 @@ public class ProAvailabilityTestSuite {
 
     FileParser duplicateParser;
 
+    FileParser emptyLines;
+
     /**
      * setupTestSuite initializes the instance
      * variables to be used throughout the testSuite
@@ -29,6 +31,9 @@ public class ProAvailabilityTestSuite {
 
         this.duplicateParser =
                 new FileParser("FileParser-test-files/duplicateInputs.txt");
+
+        this.emptyLines =
+                new FileParser("FileParser-test-files/emptyLines.txt");
     }
 
 
@@ -104,8 +109,9 @@ public class ProAvailabilityTestSuite {
      * class will not create empty BusinessHours //TODO: Should not.
      */
     @Test (expected = LineEmptyException.class)
-    public void testEmptyInputs(){
-        //TODO: Requires that empty arrays are being given
-        //      to sort instead of throwing Exception. How will we handle that?
+    public void testEmptyInputs() throws LineEmptyException {
+        ProAvailability noIntervalInputs =
+                new ProAvailability(this.emptyLines);
+        noIntervalInputs.createBusinessHours();
     }
 }
