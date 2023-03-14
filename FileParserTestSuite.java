@@ -2,6 +2,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import javax.sound.sampled.Line;
+
 /**
  * public class FileParserTestSuite serves
  * as the testing class for the FileParser class
@@ -75,5 +77,25 @@ public class FileParserTestSuite {
 
         Assert.assertArrayEquals(baseCase2,
                 this.normalParser2.getArrayOfArrays());
+    }
+
+    /**
+     * tests that the file being written to holds the expected result
+     */
+    @Test
+    public void writeToFile(){
+        try{
+            FileParser fileParser = new FileParser
+                    ("FileParser-test-files/emptyLines.txt");
+            ProAvailability pro = new ProAvailability(fileParser);
+            fileParser.writeToFile(pro.returnHoursToString(), "Output");
+
+            FileParser fileParser1 = new FileParser("Output");
+            ProAvailability pro1 = new ProAvailability(fileParser);
+            pro.returnHoursToString()
+        }catch (LineEmptyException e){
+
+        }
+
     }
 }
