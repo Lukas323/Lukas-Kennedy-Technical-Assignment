@@ -20,7 +20,6 @@ public class ProAvailability {
      */
     public ProAvailability(FileParser fileParser) {
         Integer[][] arrayOfArray = fileParser.getArrayOfArrays();
-        System.out.println(Arrays.deepToString(arrayOfArray));
         System.out.println(Arrays.deepToString(this.createBusinessHours(arrayOfArray)));
 
     }
@@ -40,7 +39,7 @@ public class ProAvailability {
         }
 
         //sorts each array based on first element: Puts smaller first elements first
-        Arrays.sort(timeIntervals, (array1,array2) -> Integer.compare(array1[0], array2[0]));
+        Arrays.sort(timeIntervals, (array1,array2) -> array1[0] - array2[0]); //TODO: How does this work
 
         //instantiating ArrayList for mutability (we don't know size of businessHours [][])
         List<Integer[]> businessHourArray = new ArrayList<>();
