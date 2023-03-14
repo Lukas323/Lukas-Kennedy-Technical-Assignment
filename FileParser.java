@@ -124,41 +124,16 @@ public class FileParser {
      */
     public void makeArray(List<Integer> intArray) {
 
-        ArrayList<Integer[]> arrayListOfArrays = new ArrayList<>();
-
-        Integer[][] arrayOfArrays = new Integer[intArray.size()/2][2];
+        this.arrayOfArrays = new Integer[intArray.size()/2][2];
 
         //Regroup integers into their respective start time and end time
         int j = 0;
         for(int i = 0; i < intArray.size(); i++){ //i from 0 to 5
 
             int k = i/2; //k goes 0,0,1,1,2,2 because java rounds fractions down
-            arrayOfArrays[k][j] = intArray.get(i);
+            this.arrayOfArrays[k][j] = intArray.get(i);
 
             j = (j+1) % 2;
-        }
-
-        /*Although this is really high runtime, I think it necessary
-          in order to remove duplicates*/
-        for(Integer[] array: arrayOfArrays){
-          arrayListOfArrays.add(array);
-        }
-
-        //HashSet instantiated to remove duplicates time periods
-        HashSet<Integer[]> duplicateRemover = new HashSet<>();
-
-        for(Integer[] array : arrayListOfArrays){
-            duplicateRemover.add(array);
-            if(duplicateRemover.contains(array)){
-                //arrayList mutability needed to remove duplicates
-                arrayListOfArrays.remove(array);
-            }
-        }
-
-        //Regroup back into arrayOfArrays
-        for(int i = 0; i < arrayListOfArrays.size(); i++){ //i from 0 to 5
-
-            this.arrayOfArrays[i][i] = intArray.get(i);
         }
     }
 
