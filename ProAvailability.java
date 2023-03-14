@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 /**
  * ProAvailability class instantiates an Array of type Input.
@@ -17,6 +18,15 @@ public class ProAvailability {
      * @param fileParser
      */
     public ProAvailability(FileParser fileParser){
+        Integer[][] arrayOfArray = fileParser.getArrayOfArrays();
+        System.out.println(Arrays.deepToString(arrayOfArray));
 
         }
+
+    public Integer[][] mergeHours(int[][] intervals){
+
+        return null;
+    }
+
+        //TODO:
     }

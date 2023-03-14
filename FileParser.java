@@ -16,6 +16,8 @@ public class FileParser {
     //private String fileName declared to be used in the class's methods
     private String fileName;
 
+    private Integer[][] arrayOfArrays;
+
     /**
      * public FileParser constructor takes in the name of the file
      * to read from and initializes the class's instance variables
@@ -53,10 +55,22 @@ public class FileParser {
             String line = reader.readLine();
 
             while(line != null){
-                //parse the line into startTime and endTime
-                String parsedNumber = this.match(line);
+                ArrayList<Integer> intArray = new ArrayList<>();
 
-//                System.out.println(integer);
+                //parsedNumber is an individual number indicating time (e.g. 07:00) (e.g. 09:20)
+                List<String> parsedNumbers = this.match(line);
+
+                for(String parsedNumber: parsedNumbers){
+
+                    //parsedNumber colon : removed and returned in integer form (e.g. 700)
+                    Integer timeInteger = this.makeInteger(parsedNumber);
+
+                    //add integer to int array (e.g. [700, 920, 1400, 1900]
+                    intArray.add(timeInteger);
+                }
+
+
+                this.makeArray(intArray);
 
                 line = reader.readLine();
             }
@@ -75,10 +89,11 @@ public class FileParser {
     }
 
     /**
-     * The method takes each .txt file line and returns an array of arrays
-     * of the time availability inputs as integers (e.g. [[700,920], [1400,1900]] )
+     * Match goes through a .txt file line and retrieves
+     * the times from within the quotation marks (07:00, 09:20)
+     * and returns a list of times
      */
-    public String match(String line) throws LineEmptyException { //TODO: Change method name
+    public List<String> match(String line) {
         //pattern gets everything between the quotes
         Pattern pattern = Pattern.compile("\"([^\"]*)\"");
 
@@ -87,7 +102,7 @@ public class FileParser {
 
         String parsedNumber = "";
 
-        ArrayList<Integer> intArray= new ArrayList<>();
+        List<String> listParsedString = new ArrayList<>();
 
         //while a match exists
         while (matcher.find()) {
@@ -95,18 +110,21 @@ public class FileParser {
             //parse numbers into a String
             parsedNumber = matcher.group(1);
 
-            //instantiating integer to store the parsedNumber integer
-            Integer integer = this.makeInteger(parsedNumber);
-
-            //add integer to int array (e.g. [700, 920, 1400, 1900]
-            intArray.add(integer);
-
-            //every two numbers should go in an array array of arrays, and
-            //every two numbers should be 1 array
-            //add them all to an arrayList and then split it by two
+            listParsedString.add(parsedNumber);
         }
 
-        System.out.println(intArray);
+        return listParsedString;
+    }
+
+    /**
+     * makeArray takes in each integer parsedInt and returns
+     * an Array of Arrays of those integers parsed. (e.g. [[700,920], [1400,1900]] )
+     * @return
+     * @throws LineEmptyException
+     */
+    public void makeArray(List<Integer> intArray) {
+
+        ArrayList<Integer[]> arrayListOfArrays = new ArrayList<>();
 
         Integer[][] arrayOfArrays = new Integer[intArray.size()/2][2];
 
@@ -116,31 +134,32 @@ public class FileParser {
 
             int k = i/2; //k goes 0,0,1,1,2,2 because java rounds fractions down
             arrayOfArrays[k][j] = intArray.get(i);
-//            System.out.println(Arrays.deepToString(arrayOfArrays));
+
             j = (j+1) % 2;
         }
 
-//        HashSet<Integer[]> duplicateRemover = new HashSet<>();
+        /*Although this is really high runtime, I think it necessary
+          in order to remove duplicates*/
+        for(Integer[] array: arrayOfArrays){
+          arrayListOfArrays.add(array);
+        }
 
-        //Add every array in arrayOfArrays to a HashSet to remove duplicates
-//        for(Integer[] array: arrayOfArrays){ //TODO: Remove duplicates
-//            duplicateRemover.add(array);
-//        }
-//
-//        Iterator iterator = duplicateRemover.iterator();
+        //HashSet instantiated to remove duplicates time periods
+        HashSet<Integer[]> duplicateRemover = new HashSet<>();
 
-//        while(iterator.hasNext()){ TODO: Put it back into an array
-//            int x = 0;
-//            for(int i = 0; i<duplicateRemover.size(); i++){
-//                int k = i/2; //k goes 0,0,1,1,2,2 because java rounds fractions down
-//
-//                arrayOfArrays[i][x] = duplicateRemover.;
-////            System.out.println(Arrays.deepToString(arrayOfArrays));
-//                x = (x+1) % 2;
-//            }
-//        }
+        for(Integer[] array : arrayListOfArrays){
+            duplicateRemover.add(array);
+            if(duplicateRemover.contains(array)){
+                //arrayList mutability needed to remove duplicates
+                arrayListOfArrays.remove(array);
+            }
+        }
 
-        return parsedNumber;
+        //Regroup back into arrayOfArrays
+        for(int i = 0; i < arrayListOfArrays.size(); i++){ //i from 0 to 5
+
+            this.arrayOfArrays[i][i] = intArray.get(i);
+        }
     }
 
 
@@ -173,6 +192,15 @@ public class FileParser {
     }
 
     /**
+     * getter method for arrayOfArrays instance variable
+     * (e.g. [[700, 920], [1400, 1900], [900, 1500]] )
+     * @return
+     */
+    public Integer[][] getArrayOfArrays(){
+        return this.arrayOfArrays;
+    }
+
+    /**
      * public writeToFile method writes the Integer[][] output from
      * the mergeProAvailability() of the ProAvailability class to a
      * new file to be viewed
@@ -185,4 +213,6 @@ public class FileParser {
     public void writeToFile(Integer[][] availabilityArray){
 
     }
+
+
 }
