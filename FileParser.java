@@ -26,13 +26,7 @@ public class FileParser {
     public FileParser(String fileName) {
         this.fileName = fileName;
 
-        try{
-            this.readFile(); //TODO: Should I have the FileParser automatically read the file
-        } catch(LineEmptyException e){
-            System.out.println
-                    (".txt file has an empty line, " +
-                            "please remove it for the solution to proceed");
-        }
+        this.readFile();
     }
 
     /**
@@ -41,7 +35,7 @@ public class FileParser {
      * the availability inputs from the professionals
      * @return
      */
-    public Integer[][] readFile() throws LineEmptyException{
+    public Integer[][] readFile() {
 
         //if the filename passed in does not exist
         try{
@@ -93,14 +87,9 @@ public class FileParser {
      * and returns a list of times
      *
      * @param line
-     * @throws LineEmptyException
      */
-    public List<String> match(String line) throws LineEmptyException{
+    public List<String> match(String line){
 
-        if(line == ""){
-            throw new LineEmptyException
-                    ("line is empty, please input a .txt file without empty lines");
-        }
         //pattern gets everything between the quotes
         Pattern pattern = Pattern.compile("\"([^\"]*)\"");
 
@@ -128,7 +117,7 @@ public class FileParser {
      * an Array of Arrays of those integers parsed. (e.g. [[700,920], [1400,1900]] )
      * @return
      */
-    public void makeArray(List<Integer> intArray) throws LineEmptyException{
+    public void makeArray(List<Integer> intArray) {
 
         this.arrayOfArrays = new Integer[intArray.size()/2][2];
 
@@ -155,12 +144,8 @@ public class FileParser {
      * @param parsedNumber
      * @return
      */
-    public Integer makeInteger(String parsedNumber) throws LineEmptyException{
+    public Integer makeInteger(String parsedNumber) {
 
-        if(parsedNumber == ""){
-            throw new LineEmptyException //TODO: This can't be the best way to handle this. What if this is one of their edge cases
-                    (".txt file inputted has empty lines, please try again.");
-        }
         //split every time period on its colon (e.g. 07:00 = ["07", "00"]
         String[] parsed = parsedNumber.split(":");
 

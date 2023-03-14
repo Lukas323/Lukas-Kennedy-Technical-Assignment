@@ -44,7 +44,7 @@ public class ProAvailabilityTestSuite {
      * a businessHour
      */
     @Test
-    public void testOverlap(){
+    public void testOverlap() throws LineEmptyException {
         //test complete overlap (when every interval overlaps to create 1 businessHour)
         ProAvailability oneBusinessHour =
                 new ProAvailability(this.normalParser);
@@ -103,19 +103,9 @@ public class ProAvailabilityTestSuite {
      * and ascertains that any empty array inputs to our ProAvailability
      * class will not create empty BusinessHours //TODO: Should not.
      */
-    @Test
+    @Test (expected = LineEmptyException.class)
     public void testEmptyInputs(){
         //TODO: Requires that empty arrays are being given
         //      to sort instead of throwing Exception. How will we handle that?
     }
-
-    /**
-     * tests that if the start time equals the end time
-     * ___ //TODO: What will happen?
-     */
-    @Test
-    public void testSameStartEnd(){
-
-    }
-
 }

@@ -18,10 +18,15 @@ public class ProAvailability {
      *
      * @param fileParser
      */
-    public ProAvailability(FileParser fileParser) {
+    public ProAvailability(FileParser fileParser){
         this.timeIntervals = fileParser.getArrayOfArrays();
-        this.createBusinessHours();
-        System.out.println(Arrays.deepToString(this.createBusinessHours()));
+        try{
+            this.createBusinessHours();
+            System.out.println(Arrays.deepToString(this.createBusinessHours()));
+        } catch (LineEmptyException e){
+
+        }
+
     }
 
     /**
@@ -31,10 +36,12 @@ public class ProAvailability {
      *
      * @return
      */
-    public Integer[][] createBusinessHours() {
+    public Integer[][] createBusinessHours() throws LineEmptyException{
 
         if(this.timeIntervals.length < 1){
-            return this.timeIntervals;
+            throw new LineEmptyException
+                    ("LineEmptyException has occurred. " +
+                            "Please input a .txt file without empty lines");
         }
 
         //sorts each array based on first element: Puts smaller first elements first
