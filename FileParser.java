@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -166,17 +163,35 @@ public class FileParser {
     }
 
     /**
-     * public writeToFile method writes the Integer[][] output from
-     * the mergeProAvailability() of the ProAvailability class to a
-     * new file to be viewed
+     * public writeToFile method writes the String[][] output from
+     * the returnHoursToString() of the ProAvailability class to a
+     * new file to be viewed, copied, etc.
      *
-     * Takes in Integer[][] output as a parameter to write it
+     * Takes in String[][] businessHours as a parameter to transcribe
      * to a new file
      *
-     * @param availabilityArray
+     * Takes in String arg that it will receive from the main method
+     * parameter to know which file to write to.
+     *
+     * @param businessHours
+     * @param arg
      */
-    public void writeToFile(Integer[][] availabilityArray){
+    public void writeToFile(String[][] businessHours, String arg) {
 
+        try {
+            //arg should be the String filepath to write to
+            FileWriter fileWriter = new FileWriter(arg);
+
+            //instantiate new bufferedWriter
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            bufferedWriter.write(businessHours.toString());
+
+            //following two clean-up lines //TODO: What does flush do?
+            bufferedWriter.flush();
+            bufferedWriter.close();
+        } catch (IOException e) {
+
+        }
     }
 
 
