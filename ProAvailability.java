@@ -122,11 +122,20 @@ public class ProAvailability {
         }
         //turn a colon into a character
         char colon = Character.valueOf(':');
+        char quotationMark = Character.valueOf('"');
 
         //add colon to the string at the proper index
         String newIntString = this.addChar(intString, colon, 2);
 
-        System.out.println(newIntString);
+        String newerIntString = this.addChar(newIntString, quotationMark, 0);
+
+        //add quotation marks to string
+        String finalIntString = "";
+        for(int i = 0; i<7; i = i + 6){
+            finalIntString = this.addChar(newerIntString, quotationMark, 6);
+        }
+
+        System.out.println(finalIntString);
 
 
 
