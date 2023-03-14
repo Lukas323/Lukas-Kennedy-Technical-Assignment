@@ -83,7 +83,7 @@ public class FileParserTestSuite {
      * tests that the file being written to holds the expected result
      */
     @Test
-    public void writeToFile(){
+    public void testWriteToFile(){
         try{
             //create new fileParser based off of the base case
             FileParser fileParser = new FileParser

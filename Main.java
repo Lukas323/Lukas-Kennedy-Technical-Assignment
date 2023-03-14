@@ -16,7 +16,6 @@ public class Main {
 
         FileParser fileParser = new FileParser(args[0]);
         ProAvailability proAvailability = new ProAvailability(fileParser);
-        ScheduleConsole view = new ScheduleConsole
-                (proAvailability, fileParser, args[1]);
+        new ScheduleConsole(proAvailability, fileParser, args[1]);
     }
 }
