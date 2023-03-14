@@ -3,10 +3,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -59,9 +56,6 @@ public class FileParser {
                 //parse the line into startTime and endTime
                 String parsedNumber = this.match(line);
 
-                //return parsedNumber as integer
-                Integer integer = this.makeInteger(parsedNumber);
-
 //                System.out.println(integer);
 
                 line = reader.readLine();
@@ -81,7 +75,8 @@ public class FileParser {
     }
 
     /**
-     * match method
+     * The method takes each .txt file line and returns an array of arrays
+     * of the time availability inputs as integers (e.g. [[700,920], [1400,1900]] )
      */
     public String match(String line) throws LineEmptyException { //TODO: Change method name
         //pattern gets everything between the quotes
@@ -93,6 +88,7 @@ public class FileParser {
         String parsedNumber = "";
 
         ArrayList<Integer> intArray= new ArrayList<>();
+
         //while a match exists
         while (matcher.find()) {
 
@@ -102,27 +98,48 @@ public class FileParser {
             //instantiating integer to store the parsedNumber integer
             Integer integer = this.makeInteger(parsedNumber);
 
-            //add integer to int array
+            //add integer to int array (e.g. [700, 920, 1400, 1900]
             intArray.add(integer);
 
             //every two numbers should go in an array array of arrays, and
             //every two numbers should be 1 array
             //add them all to an arrayList and then split it by two
-
         }
+
+        System.out.println(intArray);
 
         Integer[][] arrayOfArrays = new Integer[intArray.size()/2][2];
 
+        //Regroup integers into their respective start time and end time
         int j = 0;
         for(int i = 0; i < intArray.size(); i++){ //i from 0 to 5
 
             int k = i/2; //k goes 0,0,1,1,2,2 because java rounds fractions down
             arrayOfArrays[k][j] = intArray.get(i);
-            System.out.println(Arrays.deepToString(arrayOfArrays));
+//            System.out.println(Arrays.deepToString(arrayOfArrays));
             j = (j+1) % 2;
         }
 
-        //return String of parsedNumbers (e.g. "07:00, 09:20, 14:00)
+//        HashSet<Integer[]> duplicateRemover = new HashSet<>();
+
+        //Add every array in arrayOfArrays to a HashSet to remove duplicates
+//        for(Integer[] array: arrayOfArrays){ //TODO: Remove duplicates
+//            duplicateRemover.add(array);
+//        }
+//
+//        Iterator iterator = duplicateRemover.iterator();
+
+//        while(iterator.hasNext()){ TODO: Put it back into an array
+//            int x = 0;
+//            for(int i = 0; i<duplicateRemover.size(); i++){
+//                int k = i/2; //k goes 0,0,1,1,2,2 because java rounds fractions down
+//
+//                arrayOfArrays[i][x] = duplicateRemover.;
+////            System.out.println(Arrays.deepToString(arrayOfArrays));
+//                x = (x+1) % 2;
+//            }
+//        }
+
         return parsedNumber;
     }
 
