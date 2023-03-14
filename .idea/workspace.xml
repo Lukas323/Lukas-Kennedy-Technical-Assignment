@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bae09b0c-1460-42e5-b6ea-22aeb70aab83" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProAvailability.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProAvailability.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/ProAvailability.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/ProAvailability.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,11 +46,11 @@
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.ProAvailabilityTestSuite.testDuplicates">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Lukas-Kennedy-Technical-Assignment" />
-      <option name="PROGRAM_PARAMETERS" value="FileParser-test-files/duplicateInputs.txt hello" />
+      <option name="PROGRAM_PARAMETERS" value="FileParser-test-files/baseCase.txt hello" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -102,8 +104,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ProAvailabilityTestSuite.testDuplicates" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ProAvailabilityTestSuite.testDuplicates" />
         <item itemvalue="JUnit.FileParserTestSuite.testOneLineBaseCase" />
         <item itemvalue="JUnit.ProAvailabilityTestSuite.testEmptyInputs" />
         <item itemvalue="JUnit.ProAvailabilityTestSuite.testOverlap" />
@@ -142,7 +144,7 @@
       <workItem from="1678667281624" duration="621000" />
       <workItem from="1678668428750" duration="2750000" />
       <workItem from="1678720564038" duration="1287000" />
-      <workItem from="1678750867960" duration="18845000" />
+      <workItem from="1678750867960" duration="21358000" />
     </task>
     <servers />
   </component>

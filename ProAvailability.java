@@ -21,9 +21,8 @@ public class ProAvailability {
     public ProAvailability(FileParser fileParser){
         this.timeIntervals = fileParser.getArrayOfArrays();
         try{
-            this.createBusinessHours();
-            System.out.println(Arrays.deepToString(this.createBusinessHours()));
-        } catch (LineEmptyException e){
+            this.returnHoursToString();
+        } catch(LineEmptyException e){
 
         }
 
@@ -38,6 +37,7 @@ public class ProAvailability {
      */
     public Integer[][] createBusinessHours() throws LineEmptyException{
 
+        //if an interval of length 0 is inputted, throw an exception
         if(this.timeIntervals.length < 1){
             throw new LineEmptyException
                     ("LineEmptyException has occurred. " +
@@ -70,7 +70,7 @@ public class ProAvailability {
                 currInterval[1] = Math.max(currEndTime, nextEndTime);
                 //changes currInterval within businessHourArray
             }
-            else if (nextStartTime > currEndTime){ //if the intervals don't overlap
+            else { //if the intervals don't overlap
                 //currInterval updated to nextInterval
                 currInterval = nextInterval;
 
@@ -81,5 +81,37 @@ public class ProAvailability {
 
         //return an arrayOfArrays businessHours that mirrors the businessHours ArrayList
         return businessHourArray.toArray(new Integer[businessHourArray.size()][]);
+    }
+
+    /**
+     * return Array of Arrays of business hours back into
+     * the form given via the inputs
+     * (e.g. [[700, 1900]] -> [["07:00", "19:00"]]
+     */
+    public void returnHoursToString() throws LineEmptyException{
+        Integer[][] integerBusinessHours = this.createBusinessHours();
+
+        System.out.println(Arrays.deepToString(this.createBusinessHours()));
+
+        this.makeString(integerBusinessHours[0][0]);
+
+//        for(Integer[] array: integerBusinessHours){
+//            array[0]
+//        }
+
+    }
+
+    /**
+     * makeString takes in an integer and returns it
+     * in the proper string format for time
+     */
+    public void makeString(Integer integer){
+        String intString = integer.toString();
+        if(intString.length() == 3){
+            intString = 0 + intString;
+        }
+
+        //add semicolon
+        System.out.println(intString);
     }
 }
