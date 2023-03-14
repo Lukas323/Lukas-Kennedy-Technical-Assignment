@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bae09b0c-1460-42e5-b6ea-22aeb70aab83" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/FileParser-test-files/emptyLines.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileParser-test-files/baseCase.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FileParser-test-files/baseCase.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProAvailabilityTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProAvailabilityTestSuite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/FileParser-test-files/baseCase.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/FileParser-test-files/baseCase.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/ProAvailabilityTestSuite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/ProAvailabilityTestSuite.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,20 +44,21 @@
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.ProAvailabilityTestSuite.testEmptyInputs">
+  <component name="RunManager" selected="JUnit.ProAvailabilityTestSuite.testDuplicates">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Lukas-Kennedy-Technical-Assignment" />
-      <option name="PROGRAM_PARAMETERS" value="FileParser-test-files/emptyLines.txt hello" />
+      <option name="PROGRAM_PARAMETERS" value="FileParser-test-files/duplicateInputs.txt hello" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProAvailabilityTestSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileParserTestSuite.testOneLineBaseCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lukas-Kennedy-Technical-Assignment" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ProAvailabilityTestSuite" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="FileParserTestSuite" />
+      <option name="METHOD_NAME" value="testOneLineBaseCase" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -99,18 +95,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.FileParserTestSuite.testOneLineBaseCase" />
       <item itemvalue="JUnit.ProAvailabilityTestSuite.testEmptyInputs" />
       <item itemvalue="JUnit.ProAvailabilityTestSuite.testDuplicates" />
-      <item itemvalue="JUnit.ProAvailabilityTestSuite" />
       <item itemvalue="JUnit.ProAvailabilityTestSuite.testOverlap" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ProAvailabilityTestSuite.testEmptyInputs" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ProAvailabilityTestSuite.testDuplicates" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.FileParserTestSuite.testOneLineBaseCase" />
+        <item itemvalue="JUnit.ProAvailabilityTestSuite.testEmptyInputs" />
         <item itemvalue="JUnit.ProAvailabilityTestSuite.testOverlap" />
-        <item itemvalue="JUnit.ProAvailabilityTestSuite" />
       </list>
     </recent_temporary>
   </component>
@@ -146,7 +142,7 @@
       <workItem from="1678667281624" duration="621000" />
       <workItem from="1678668428750" duration="2750000" />
       <workItem from="1678720564038" duration="1287000" />
-      <workItem from="1678750867960" duration="18366000" />
+      <workItem from="1678750867960" duration="18427000" />
     </task>
     <servers />
   </component>

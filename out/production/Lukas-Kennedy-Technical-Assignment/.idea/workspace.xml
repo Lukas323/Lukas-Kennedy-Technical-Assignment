@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bae09b0c-1460-42e5-b6ea-22aeb70aab83" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Lukas-Kennedy-Technical-Assignment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Lukas-Kennedy-Technical-Assignment.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileParser-test-files/test1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FileParser-test-files/baseCase.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/FileParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileParserTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/FileParserTestSuite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProAvailability.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProAvailability.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,29 +45,68 @@
   }
 }]]></component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="ContinuousTimeInputOutput" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ContinuousTimeInputOutput" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Lukas-Kennedy-Technical-Assignment" />
+      <option name="PROGRAM_PARAMETERS" value="FileParser-test-files/duplicateInputs.txt hello" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="FileParserTestSuite.testOneLineBaseCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lukas-Kennedy-Technical-Assignment" />
-      <option name="PROGRAM_PARAMETERS" value="FileParser-test-files/test1.txt placeholder" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FileParserTestSuite" />
+      <option name="METHOD_NAME" value="testOneLineBaseCase" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProAvailabilityTestSuite.testDuplicates" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lukas-Kennedy-Technical-Assignment" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ProAvailabilityTestSuite" />
+      <option name="METHOD_NAME" value="testDuplicates" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProAvailabilityTestSuite.testEmptyInputs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lukas-Kennedy-Technical-Assignment" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ProAvailabilityTestSuite" />
+      <option name="METHOD_NAME" value="testEmptyInputs" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProAvailabilityTestSuite.testOverlap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lukas-Kennedy-Technical-Assignment" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ProAvailabilityTestSuite" />
+      <option name="METHOD_NAME" value="testOverlap" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ContinuousTimeInputOutput" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.FileParserTestSuite.testOneLineBaseCase" />
+      <item itemvalue="JUnit.ProAvailabilityTestSuite.testEmptyInputs" />
+      <item itemvalue="JUnit.ProAvailabilityTestSuite.testDuplicates" />
+      <item itemvalue="JUnit.ProAvailabilityTestSuite.testOverlap" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.ContinuousTimeInputOutput" />
+        <item itemvalue="JUnit.FileParserTestSuite.testOneLineBaseCase" />
+        <item itemvalue="JUnit.ProAvailabilityTestSuite.testEmptyInputs" />
+        <item itemvalue="JUnit.ProAvailabilityTestSuite.testDuplicates" />
+        <item itemvalue="JUnit.ProAvailabilityTestSuite.testOverlap" />
       </list>
     </recent_temporary>
   </component>
@@ -108,7 +142,7 @@
       <workItem from="1678667281624" duration="621000" />
       <workItem from="1678668428750" duration="2750000" />
       <workItem from="1678720564038" duration="1287000" />
-      <workItem from="1678750867960" duration="12593000" />
+      <workItem from="1678750867960" duration="18427000" />
     </task>
     <servers />
   </component>

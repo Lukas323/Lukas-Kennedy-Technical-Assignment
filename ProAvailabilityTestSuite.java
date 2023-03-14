@@ -92,7 +92,7 @@ public class ProAvailabilityTestSuite {
      * one business hour
      */
     @Test
-    public void testDuplicates(){
+    public void testDuplicates() throws LineEmptyException {
         //I placed each previous file's inputs into the same line twice to test
         ProAvailability duplicateAvailabilities =
                 new ProAvailability(this.duplicateParser);
@@ -101,6 +101,8 @@ public class ProAvailabilityTestSuite {
         duplicatesMerged[0][1] = 1903;
         duplicatesMerged[1][0] = 2100;
         duplicatesMerged[1][1] = 2359;
+        Assert.assertArrayEquals(duplicatesMerged,
+                duplicateAvailabilities.createBusinessHours());
     }
 
     /**

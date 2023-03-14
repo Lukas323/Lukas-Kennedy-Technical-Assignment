@@ -40,6 +40,11 @@ public class FileParserTestSuite {
      * readFile() will indeed contain duplicates, but they
      * will get sorted out in the createBusinessHours method
      * of the ProAvailability class
+     *
+     * There is no need to test for empty lines here, because
+     * the createBusinessHours() method of the ProAvailability
+     * class throws hte LineEmptyException upon encountering
+     * and empty line
      */
 
 
@@ -56,7 +61,7 @@ public class FileParserTestSuite {
         baseCase[1][1] = 1900;
         baseCase[2][0] = 900;
         baseCase[2][1] = 1500;
-        Assert.assertEquals(baseCase, this.normalParser.getArrayOfArrays());
+        Assert.assertArrayEquals(baseCase, this.normalParser.getArrayOfArrays());
 
         Integer[][] baseCase2 = new Integer[4][2];
         baseCase2[0][0] = 1000;
@@ -68,16 +73,7 @@ public class FileParserTestSuite {
         baseCase2[3][0] = 2100;
         baseCase2[3][1] = 2359;
 
-        Assert.assertEquals(baseCase2,
+        Assert.assertArrayEquals(baseCase2,
                 this.normalParser2.getArrayOfArrays());
-    }
-
-    /**
-     * testEmptyLines tests for the scenario in which
-     * empty lines exist on the file. TODO: I should skip over each empty line to the next one
-     */
-    @Test //TODO: Ask about best methodology here
-    public void testEmptyLines(){
-
     }
 }
