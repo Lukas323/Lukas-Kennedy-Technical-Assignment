@@ -120,7 +120,6 @@ public class ProAvailability {
 
         }
 
-        System.out.println(Arrays.deepToString(finalOutput));
         return finalOutput;
     }
 

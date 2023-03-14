@@ -16,15 +16,7 @@ public class Main {
 
         FileParser fileParser = new FileParser(args[0]);
         ProAvailability proAvailability = new ProAvailability(fileParser);
-        /* println that prints to terminal is in ProAvailability
-          returnHoursToString() method before the return */
-
-        try{
-            fileParser.writeToFile
-                    (proAvailability.returnHoursToString(),
-                            args[1]);
-        } catch(LineEmptyException e){
-
-        }
+        ScheduleConsole view = new ScheduleConsole
+                (proAvailability, fileParser, args[1]);
     }
 }

@@ -184,7 +184,7 @@ public class FileParser {
 
             //instantiate new bufferedWriter
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-            bufferedWriter.write(businessHours.toString());
+            bufferedWriter.write(Arrays.deepToString(businessHours));
 
             //following two clean-up lines //TODO: What does flush do?
             bufferedWriter.flush();

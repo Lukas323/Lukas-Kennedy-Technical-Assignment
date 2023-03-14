@@ -30,25 +30,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "openjdk-19 (2)",
-    "last_opened_file_path": "/Users/lukaskennedy/Desktop/Angi/Lukas-Kennedy-Technical-Assignment",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-19 (2)&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lukaskennedy/Desktop/Angi/Lukas-Kennedy-Technical-Assignment&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Lukas-Kennedy-Technical-Assignment" />
-      <option name="PROGRAM_PARAMETERS" value="FileParser-test-files/duplicateInputs.txt hello" />
+      <option name="PROGRAM_PARAMETERS" value="FileParser-test-files/noOverlap.txt &quot;Output&quot;" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -103,9 +103,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ProAvailabilityTestSuite.testDuplicates" />
         <item itemvalue="JUnit.FileParserTestSuite.testOneLineBaseCase" />
         <item itemvalue="JUnit.ProAvailabilityTestSuite.testEmptyInputs" />
-        <item itemvalue="JUnit.ProAvailabilityTestSuite.testDuplicates" />
         <item itemvalue="JUnit.ProAvailabilityTestSuite.testOverlap" />
       </list>
     </recent_temporary>
@@ -142,7 +142,10 @@
       <workItem from="1678667281624" duration="621000" />
       <workItem from="1678668428750" duration="2750000" />
       <workItem from="1678720564038" duration="1287000" />
-      <workItem from="1678750867960" duration="18427000" />
+      <workItem from="1678750867960" duration="28123000" />
+      <workItem from="1678818037673" duration="57000" />
+      <workItem from="1678818113937" duration="659000" />
+      <workItem from="1678818786959" duration="12000" />
     </task>
     <servers />
   </component>
