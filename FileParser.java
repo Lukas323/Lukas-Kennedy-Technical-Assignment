@@ -27,7 +27,7 @@ public class FileParser {
         this.fileName = fileName;
 
         try{
-            this.readFile();
+            this.readFile(); //TODO: Should I have the FileParser automatically read the file
         } catch(LineEmptyException e){
             System.out.println
                     (".txt file has an empty line, " +

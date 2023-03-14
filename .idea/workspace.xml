@@ -5,8 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bae09b0c-1460-42e5-b6ea-22aeb70aab83" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/FileParser-test-files/test1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FileParser-test-files/test1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FileParser-test-files/baseCase2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FileParser-test-files/duplicateInputs.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FileParser-test-files/noOverlap.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProAvailabilityTestSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Lukas-Kennedy-Technical-Assignment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Lukas-Kennedy-Technical-Assignment.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileParser-test-files/test1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FileParser-test-files/baseCase.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/FileParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileParserTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/FileParserTestSuite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProAvailability.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProAvailability.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/.idea/Lukas-Kennedy-Technical-Assignment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/.idea/Lukas-Kennedy-Technical-Assignment.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/CSVParserTestSuite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/FileParser-test-files/test1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/FileParserTestSuite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/FileParserTestSuite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/ProAvailability.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lukas-Kennedy-Technical-Assignment/ProAvailability.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,17 +45,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-19 (2)&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/lukaskennedy/Desktop/Angi/Lukas-Kennedy-Technical-Assignment&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "openjdk-19 (2)",
+    "last_opened_file_path": "/Users/lukaskennedy/Desktop/Angi/Lukas-Kennedy-Technical-Assignment",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
-  <component name="RunManager" selected="Application.Main">
+}]]></component>
+  <component name="RunManager" selected="JUnit.ProAvailabilityTestSuite">
     <configuration name="ContinuousTimeInputOutput" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ContinuousTimeInputOutput" />
       <module name="Lukas-Kennedy-Technical-Assignment" />
@@ -52,7 +70,36 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Lukas-Kennedy-Technical-Assignment" />
-      <option name="PROGRAM_PARAMETERS" value="FileParser-test-files/test1.txt placeholder" />
+      <option name="PROGRAM_PARAMETERS" value="FileParser-test-files/baseCase2.txt hello" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileParserTestSuite.testOneLineBaseCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lukas-Kennedy-Technical-Assignment" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FileParserTestSuite" />
+      <option name="METHOD_NAME" value="testOneLineBaseCase" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProAvailabilityTestSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lukas-Kennedy-Technical-Assignment" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ProAvailabilityTestSuite" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProAvailabilityTestSuite.testOverlap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lukas-Kennedy-Technical-Assignment" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ProAvailabilityTestSuite" />
+      <option name="METHOD_NAME" value="testOverlap" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -60,10 +107,16 @@
     <list>
       <item itemvalue="Application.ContinuousTimeInputOutput" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.ProAvailabilityTestSuite" />
+      <item itemvalue="JUnit.ProAvailabilityTestSuite.testOverlap" />
+      <item itemvalue="JUnit.FileParserTestSuite.testOneLineBaseCase" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProAvailabilityTestSuite" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ProAvailabilityTestSuite.testOverlap" />
+        <item itemvalue="JUnit.FileParserTestSuite.testOneLineBaseCase" />
         <item itemvalue="Application.ContinuousTimeInputOutput" />
       </list>
     </recent_temporary>
@@ -100,7 +153,7 @@
       <workItem from="1678667281624" duration="621000" />
       <workItem from="1678668428750" duration="2750000" />
       <workItem from="1678720564038" duration="1287000" />
-      <workItem from="1678750867960" duration="10863000" />
+      <workItem from="1678750867960" duration="15675000" />
     </task>
     <servers />
   </component>
@@ -125,11 +178,6 @@
           <properties class="java.lang.NumberFormatException" package="java.lang" />
           <option name="timeStamp" value="9" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ProAvailability.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

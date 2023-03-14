@@ -8,8 +8,8 @@ import java.util.List;
  */
 public class ProAvailability {
 
-    //private Array of inputs
-    private Input[] inputsArrayed;
+    //private arrayOfArrays instance variable declared
+    private Integer[][] timeIntervals;
 
     /**
      * ProAvailability class constructor
@@ -19,9 +19,9 @@ public class ProAvailability {
      * @param fileParser
      */
     public ProAvailability(FileParser fileParser) {
-        Integer[][] arrayOfArray = fileParser.getArrayOfArrays();
-        System.out.println(Arrays.deepToString(this.createBusinessHours(arrayOfArray)));
-
+        this.timeIntervals = fileParser.getArrayOfArrays();
+        this.createBusinessHours();
+        System.out.println(Arrays.deepToString(this.createBusinessHours()));
     }
 
     /**
@@ -29,26 +29,25 @@ public class ProAvailability {
      * integers —timeIntervals— and merges them based on
      * overlaps. First, it sorts the arrays, then it merges them
      *
-     * @param timeIntervals
      * @return
      */
-    public Integer[][] createBusinessHours(Integer[][] timeIntervals) {
+    public Integer[][] createBusinessHours() {
         //if there are one or zero timeIntervals (availability periods inputted)
-        if (timeIntervals.length <= 1) {
-            return timeIntervals;
+        if (this.timeIntervals.length <= 1) {
+            return this.timeIntervals;
         }
 
         //sorts each array based on first element: Puts smaller first elements first
-        Arrays.sort(timeIntervals, (array1,array2) -> array1[0] - array2[0]); //TODO: How does this work
+        Arrays.sort(this.timeIntervals, (array1,array2) -> array1[0] - array2[0]); //TODO: How does this work
 
         //instantiating ArrayList for mutability (we don't know size of businessHours [][])
         List<Integer[]> businessHourArray = new ArrayList<>();
 
         //currInterval (e.g. [700, 920] ) a.k.a businessHour
-        Integer[] currInterval = timeIntervals[0];
+        Integer[] currInterval = this.timeIntervals[0];
         businessHourArray.add(currInterval);
 
-        for(Integer[] nextInterval: timeIntervals){
+        for(Integer[] nextInterval: this.timeIntervals){
             /*index into each timeInterval array and set the currStartTime equal to the 1st
               index of the first array, and currEndTime equal to the 2nd index of the first array*/
             Integer currStartTime = currInterval[0];

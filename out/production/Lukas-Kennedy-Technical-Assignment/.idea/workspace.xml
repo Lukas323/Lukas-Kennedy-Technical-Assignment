@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bae09b0c-1460-42e5-b6ea-22aeb70aab83" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/FileParserTestSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Lukas-Kennedy-Technical-Assignment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Lukas-Kennedy-Technical-Assignment.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileParser-test-files/test1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FileParser-test-files/baseCase.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/FileParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileParserTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/FileParserTestSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProAvailability.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProAvailability.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,16 +35,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-19 (2)&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/lukaskennedy/Desktop/Angi/Lukas-Kennedy-Technical-Assignment&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "openjdk-19 (2)",
+    "last_opened_file_path": "/Users/lukaskennedy/Desktop/Angi/Lukas-Kennedy-Technical-Assignment",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="ContinuousTimeInputOutput" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ContinuousTimeInputOutput" />
@@ -100,6 +108,7 @@
       <workItem from="1678667281624" duration="621000" />
       <workItem from="1678668428750" duration="2750000" />
       <workItem from="1678720564038" duration="1287000" />
+      <workItem from="1678750867960" duration="12593000" />
     </task>
     <servers />
   </component>
